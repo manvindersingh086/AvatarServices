@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    input[type=text], input[type=number]{
+      width: 25%;
+      padding: 5px 15px;
+      margin: auto;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+ 
+  input[type=submit]{
+      width: 10%;
+      padding: 5px 15px;
+      margin: auto;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      vertical-align: middle;
+                border: burlywood;
+                border-radius: 4px;
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 10px 10px;
+                cursor: pointer;
+                width: 25%;
+                background-color: #04AA6D;
+    }
+
+  form{
+      width: 250 px;
+      margin:0 auto;
+    }
+  
+  body {
+    background-image: url('/images/driving.JPG');
+    background-repeat: no-repeat;
+    background-size: cover;
+       }
+  </style>
+  <script type="text/javascript" src="/validation/covid.js"></script>
+</head>
+
+
+<body align = 'center'>
+<form action='/DrivingAndTransportHome'>
+  <div style="border: solid;width:600px;background-color: white;opacity: 0.85;margin-left: 340px;height:700px;margin-top: 50px;">
+    <h2 style="margin-top: 40px;">Check Demerit Points</h2><br>
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray;width:80%">
+    {{#each dmpoints}}
+     <div style="margin-top: 30px;margin-left: 100px;">
+    <table>
+      <tr>
+        <th style="width: 200px;">
+          <label for="DrivingLicenceNumber" >Driving Licence Number:</label>
+        </th>
+        <th>
+            {{this.DrivingLicenceNumber}}  
+        </th>  
+      </tr>
+    </table>
+  </div>
+  <div style="margin-top: 30px;margin-left: 91px;">
+    <table>
+      <tr>
+        <th style="width: 200px;"  align="right">
+          <label for="dob" >Date of Birth:</label>
+        </th>
+        <th>
+           {{this.DateOfBirth}}
+        </th>
+        
+      </tr>
+    </table>
+  </div>
+  <div style="margin-top: 30px;margin-left: 88px;">
+    <table>
+      <tr>
+        <th style="width: 200px;"  align="right">
+          <label for="expiryDate">Expiry Date:</label>
+        </th>
+        <th>
+            {{this.ExpiryDate}}
+        </th>
+    
+      </tr>
+    </table>
+	</div>  
+    <div style="margin-top: 30px;margin-left: 88px;">
+    <table>
+      <tr>
+        <th style="width: 200px;" align="right">
+          <label for="expiryDate">Demerit Points:</label>
+        </th>
+        <th style="padding-left: 25px;">
+            {{this.DermitPoint}}
+        </th>
+    
+      </tr>
+    </table>
+	</div>  
+    <div style="margin-top: 30px;">
+    
+     <input type="submit" value="Home">
+    </div>
+    <table>
+    <tr>
+      <th style="color: red;padding-top: 30px;" align="left">Important Information</th>
+    </tr>
+    <tr>
+      <th>
+        <ul style="color: red;">
+          <li>13 to 15 points:   3 month suspension</li>
+          <li>16 to 19 points:   4 month suspension</li>
+          <li>20 or more points: 5 month suspension</li>
+        </ul>
+      </th>
+    </tr>
+  </table>
+  <div>
+    <span style="color: red;">
+              Transport may refuse to renew your licence if you have exceeded your demerit point threshold, or you have committed a serious speeding offence. 
+    </span>
+  </div>
+	</div>
+    {{/each}}
+  
+  
+</form>
+</body>
+</html>
+

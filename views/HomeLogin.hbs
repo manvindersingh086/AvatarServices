@@ -1,0 +1,127 @@
+<html>
+<head>
+	<title>Service NSW</title>
+	
+	<script src="C:\Users\prathap\Desktop\MCompSc UOW\Sem 3\Service oriented SW engineering\Project\code.js"></script>
+	<style>
+	    body{
+              background-image: url('/images/HomePage.jpg');
+              background-repeat: no-repeat;
+              background-size: cover;
+            
+              
+	        }
+
+      input[type=text], input[type=password] {
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+  
+          }
+      .button {
+            border: burlywood;
+            border-radius: 4px;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 10px;
+            cursor: pointer;
+            width: 300px;
+            background-color: #04AA6D;
+      }
+
+        .buttons {
+          display: inline-block;
+          border-radius: 4px;
+          background-color:cadetblue;
+          border: olivedrab;
+          color: #FFFFFF;
+          text-align: center;
+          font-size: 28px;
+          padding: 20px;
+          width: 300px;
+          transition: all 0.5s;
+          cursor: pointer;
+          margin: 5px;
+                }
+
+        .buttons span {
+          cursor: pointer;
+          display: inline-block;
+          position: relative;
+          transition: 0.5s;
+        }
+
+        .buttons span:after {
+
+          content: '\00bb';
+          position: absolute;
+          opacity: 0;
+          top: 0;
+          right: -20px;
+          transition: 0.5s;
+        }
+        .button:hover{
+            background: #383;
+        }
+        .buttons:hover{
+            background: #575757;
+             width: 360px;
+        }
+        .buttons:hover span {
+          padding-right: 25px;
+        }
+
+        .buttons:hover span:after {
+
+          opacity: 1;
+          right: 0;
+        }
+	</style>
+</head>    
+<body>
+      <table style="padding-top: 15px;margin-left: 850px;">
+          <tr >
+              <th>
+                  <h2 style="padding-top: 20px;color: springgreen;">Welcome {{Name}}</h2>
+              </th>
+              <th >
+                        <a href="Logout" style="margin-left: 950px;color: white;margin-left: 10px; border: solid white;border-radius: 2px;background-color:lightsalmon;border-width: thin;text-decoration:None;padding: 2px 8px 2px 8px;">Logout</a>
+
+              </th>
+          </tr>
+      </table>
+      
+  
+  <font color="white" size="6">
+    <h2 style="margin-left: 350px;">Welcome to Avatar Services
+    <br>
+    </h2>
+  </font>
+
+  <font color="white" size="6"> 
+    <marquee><b><i>Stay home Stay safe!</i></b></marquee>  
+  </font>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <div style="margin-left: 130px;">
+    <br>
+    <button type="button" class="buttons button2" style="vertical-align:middle" onclick="window.location.href='CovidRegistrationPage'"><span>Covid 19 </span> </button>
+    <button type="button" class="buttons button3" style="vertical-align:middle" onclick="window.location.href='DrivingAndTransportHome'"><span>Driving and transport </span> </button>
+    <button type="button" class="buttons button4" style="vertical-align:middle" onclick="window.location.href='C:/Users/prathap/Desktop/MCompSc UOW/Sem 3/Service oriented SW engineering/Project/implementation/service3.html'"><span>Education </span> </button>
+    <br>
+  </div>
+  
+  <br>
+
+</body>
+</html>

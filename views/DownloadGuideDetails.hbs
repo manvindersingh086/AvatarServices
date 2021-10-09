@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    input[type=text], input[type=number]{
+      width: 25%;
+      padding: 5px 15px;
+      margin: auto;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+ 
+  input[type=submit]{
+      width: 10%;
+      padding: 5px 15px;
+      margin: auto;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      vertical-align: middle;
+                border: burlywood;
+                border-radius: 4px;
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 10px 10px;
+                cursor: pointer;
+                width: 25%;
+                background-color: crimson;
+    }
+
+  form{
+      width: 250 px;
+      margin:0 auto;
+    }
+  
+  body {
+    background-image: url('/images/tourism.JPG');
+    background-repeat: no-repeat;
+    background-size: cover;
+       }
+  </style>
+</head>
+
+
+<body align = 'center'>
+<form action='/DownloadGuideDetails' method="POST">
+  <div style="border: solid;width:600px;background-color: white;opacity: 0.85;margin-left: 340px;height:500px;margin-top: 50px;">
+    <h2 style="margin-top: 40px;">Guide Hiring</h2><br>
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray;width:80%">
+    {{#each guideDls}}
+     <div style="margin-top: 30px;margin-left: 250px;">
+    <table>
+      <tr>
+        <th >
+            <input type="hidden" id="guideId" name="guideId" value="{{this._id}}">
+          <label for="Name" >Name:</label>
+        </th>
+        <th>
+            {{this.Name}}  
+        </th>  
+      </tr>
+    </table>
+  </div>
+  <div style="margin-top: 30px;margin-left: 260px;">
+    <table>
+      <tr>
+        <th align="right">
+          <label for="age" >Age:</label>
+        </th>
+        <th>
+           {{this.Age}}
+        </th>
+        
+      </tr>
+    </table>
+  </div>
+  <div style="margin-top: 30px;margin-left: 88px;">
+    <table>
+      <tr>
+        <th style="width: 200px;"  align="right">
+          <label for="fee">Fee:</label>
+        </th>
+        <th>
+            {{this.Fee}}
+        </th>
+    
+      </tr>
+    </table>
+	</div>  
+    <div style="margin-top: 30px;margin-left: 260px;">
+    <table>
+      <tr>
+        <th  align="right">
+          <label for="city">City:</label>
+        </th>
+        <th>
+            {{this.City}}
+        </th>
+    
+      </tr>
+    </table>
+	</div>  
+
+    <div style="margin-top: 30px;margin-left: 94px;">
+    <table>
+      <tr>
+        <th style="width: 200px;" align="right">
+          <label for="city">Language:</label>
+        </th>
+        <th>
+            {{this.Language}}
+        </th>
+      </tr>
+    </table>
+	</div>  
+    <div style="margin-top: 30px;">
+    
+     <input type="submit" style="width: 200px;" value="Download Guide Details">
+    </div>
+    
+	</div>
+    {{/each}}
+  
+  
+</form>
+</body>
+</html>
+

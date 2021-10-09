@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    input[type=text], input[type=number]{
+      width: 25%;
+      padding: 5px 15px;
+      margin: auto;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+ 
+  input[type=submit]{
+      width: 10%;
+      padding: 5px 15px;
+      margin: auto;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      vertical-align: middle;
+                border: burlywood;
+                border-radius: 4px;
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 10px 10px;
+                cursor: pointer;
+                width: 25%;
+                background-color: #04AA6D;
+    }
+    .button {
+            border: burlywood;
+            border-radius: 4px;
+            color: white;
+            padding: 5px 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            
+            cursor: pointer;
+            width: 350px;
+            background-color: #04AA6D;
+      }
+
+        .buttons {
+          display: inline-block;
+          border-radius: 4px;
+          background-color:crimson;
+          border: olivedrab;
+          color: #FFFFFF;
+          text-align: center;
+          font-size: 28px;
+          padding: 5px;
+          width: 350px;
+          transition: all 0.5s;
+          cursor: pointer;
+          margin: 5px;
+                }
+
+        .buttons span {
+          cursor: pointer;
+          display: inline-block;
+          position: relative;
+          transition: 0.5s;
+        }
+
+        .buttons span:after {
+
+          content: '\00bb';
+          position: absolute;
+          opacity: 0;
+          top: 0;
+          right: -20px;
+          transition: 0.5s;
+        }
+        .button:hover{
+            background: #383;
+        }
+        .buttons:hover{
+            background: #575757;
+             width: 350px;
+        }
+        .buttons:hover span {
+          padding-right: 25px;
+        }
+
+        .buttons:hover span:after {
+
+          opacity: 1;
+          right: 0;
+        }
+  form{
+      width: 250 px;
+      margin:0 auto;
+    }
+  
+  body {
+    background-image: url('/images/tourism.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+       }
+  </style>
+</head>
+
+
+<body align = 'center'>
+<form action='' >
+  <div style="border: solid;width:600px;background-color: white;opacity: 0.87;margin-left: 320px;height:500px;margin-top: 50px;">
+    <h1 style="margin-top: 20px;">Tourism</h1><br>
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray;width:80%">
+  <div style="margin-top: 30px;">
+   
+    <table>
+      <tr>
+        <div style="margin-left: 30px;">
+             <br>
+                <button type="button" class="buttons button2" style="vertical-align:middle" onclick="window.location.href='hotelBooking'"><span>Hotel Booking</span> </button>
+                <button type="button" class="buttons button3" style="vertical-align:middle" onclick="window.location.href='ticketBooking'"><span>Ticket booking for local events</span> </button>
+                <button type="button" class="buttons button4" style="vertical-align:middle" onclick="window.location.href='guideHire'"><span>Guide Hiring</span> </button>
+                <button type="button" class="buttons button4" style="vertical-align:middle" onclick="window.location.href='vehicleBooking'"> <span> Vehicele Booking</span> </button>
+                <button type="button" class="buttons button4" style="vertical-align:middle" onclick="window.location.href=''"> <span> Food Ordering</span> </button>
+             <br>
+        </div>
+      </tr>
+    </table>
+
+  </div>
+</form>
+</body>
+</html>
+

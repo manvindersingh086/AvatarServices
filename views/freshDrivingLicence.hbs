@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    input[type=text], input[type=number]{
+      width: 25%;
+      padding: 5px 15px;
+      margin: auto;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+ 
+  input[type=submit]{
+      width: 10%;
+      padding: 5px 15px;
+      margin: auto;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      vertical-align: middle;
+                border: burlywood;
+                border-radius: 4px;
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 10px 10px;
+                cursor: pointer;
+                width: 25%;
+                background-color: #04AA6D;
+    }
+
+  form{
+      width: 250 px;
+      margin:0 auto;
+    }
+  
+  body {
+    background-image: url('/images/driving.JPG');
+    background-repeat: no-repeat;
+    background-size: cover;
+       }
+  </style>
+  <script type="text/javascript" src="/validation/drivingAndTransport.js"></script>
+</head>
+
+
+<body align = 'center'>
+<form action='/freshDrivingLicenceRegistration' method="POST" enctype="multipart/form-data">
+  <div style="border: solid;width:600px;background-color: white;opacity: 0.85;margin-left: 340px;height:700px;margin-top: 50px;">
+    <h2 style="margin-top: 40px;">Driving Licence Registration</h2><br>
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray;width:80%">
+  <div style="margin-top: 30px;margin-left: 150px;">
+    <table>
+      <tr>
+        <th style="width: 120px;">
+          <label for="Name" >Name:</label>
+        </th>
+        <th>
+           <input type="text" id="Name" name = 'Name' style="width: 150px;" required>
+        </th>
+        
+      </tr>
+    </table>
+  </div>
+ <div style="margin-top: 30px;margin-left: 150px;">
+    <table>
+      <tr>
+        <th style="width: 120px;">
+          <label for="dob">Date of birth:</label>
+        </th>
+        <th>
+          <input type="date" id="dob" name="dob" style="width: 145px;" onchange="validateDateOfBirth()" required>
+        </th>
+        
+      </tr>
+    </table>
+  </div>
+  <div style="margin-top: 30px;margin-left: 150px;">
+    <table>
+      <tr>
+        <th style="width: 120px;">
+          <label for="gender">Gender:</label>
+        </th>
+        <th>
+          <input type="radio" id="male" name="Gender" value="Male" style="width:10px;" checked="true">
+          <label for="Male">Male</label>
+          <input type="radio" id="female" name="Gender" value="Female" style="width:10px;">
+          <label for="Female">Female</label>
+        </th>
+      </tr>
+    </table>
+  </div>
+  <div style="margin-top: 30px;margin-left: 150px;">
+    <table>
+      <tr>
+        <th style="width: 120px;">
+          <label for="email">Email:</label>
+        </th>
+        <th>
+          <input type="text" id="email" name="email" style="width: 145px;" onchange="validateEmail()" required>
+        </th>
+      </tr>
+    </table>
+  </div>
+  <div style="margin-top: 30px;margin-left: 150px;">
+    <table>
+      <tr>
+        <th style="width: 120px;">
+          <label for="address">Address:</label>
+        </th>
+        <th>
+		<textarea id="address" name="address" rows="4" cols="20" required>
+ 
+  </textarea>
+           
+        </th>
+    
+      </tr>
+    </table> 
+  </div>
+  <div style="margin-top: 30px;margin-left: 150px;">
+    <table>
+      <tr>
+        <th style="width: 120px;">
+          <label for="idproof">Identity proof:</label>
+        </th>
+        <th>
+           <input type="File" id="idproof" name="Proof"  style="width: 150px;" onchange="validatefiletype('idproof')" required>
+		   <label for="myfile">Select a file:</label>
+
+        </th>
+    
+      </tr>
+    </table>
+	</div>
+	<div style="margin-top: 30px;margin-left: 150px;">
+    <table>
+      <tr>
+        <th style="width: 120px;">
+          <label for="addressProof">Address Proof</label>
+        </th>
+        <th>
+           <input type="File" id="addressproof" name="Proof" onchange="validatefiletype('addressproof')"  style="width: 150px;" required>
+		   <label for="myfile">Select a file:</label>
+
+        </th>
+    
+      </tr>
+    </table>
+	</div>
+	
+  
+    <div style="margin-top: 30px;">
+    
+     <input type="submit" value="Submit">
+    </div>
+	</div>
+</form>
+</body>
+</html>
+

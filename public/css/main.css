@@ -1,0 +1,26 @@
+body{
+	position: absolute;
+	top: 35%;
+	margin-top: -40px;
+	margin-left: -350px;
+	left: 30%;
+	text-align: center;
+}
+
+#text, #input {
+	height: 35px;
+	font-size: 18pt;
+	padding: 5px;
+}
+
+#text, #output {
+	height: 35px;
+	font-size: 18pt;
+	padding: 5px;
+}
+
+#text {
+	height: 35px;
+	font-size: 18pt;
+	padding: 5px;
+}

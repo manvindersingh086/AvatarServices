@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    input[type=text], input[type=number]{
+      width: 25%;
+      padding: 5px 15px;
+      margin: auto;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+ 
+  input[type=submit]{
+      width: 10%;
+      padding: 5px 15px;
+      margin: auto;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      vertical-align: middle;
+                border: burlywood;
+                border-radius: 4px;
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 10px 10px;
+                cursor: pointer;
+                width: 25%;
+                background-color: #04AA6D;
+    }
+
+  form{
+      width: 250 px;
+      margin:0 auto;
+    }
+  
+  body {
+    background-image: url('/images/tourism.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+       }
+  </style>
+</head>
+
+<body align = 'center'>
+<form action="" method="POST">
+<div style="border: solid;width:600px;background-color: white;opacity: 0.87;margin-left: 320px;height:540px;margin-top: 20px;">
+    <h2 style="margin-top: 20px;">Ticket Booking</h2><br>
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray;width:80%">
+  <div style="margin-top: 30px;">
+    <table>
+      <tr>
+        <th>
+            <label for="location" style="margin-left: 180px;">Location</label>
+        </th>
+        <th>
+           <input type="text" id="location" name = 'location' style="width: 200px;margin-left: 10px;" placeholder="Where are you going?" required>
+        </th> 
+      </tr>
+    </table>
+  </div>
+
+  <div style="margin-top: 10px;margin-left: 50px;">
+    <input type="submit" value="Search" style="background-color: crimson;">
+  </div>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    input[type=text], input[type=number]{
+      width: 25%;
+      padding: 5px 15px;
+      margin: auto;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+ 
+  input[type=submit]{
+      width: 10%;
+      padding: 5px 15px;
+      margin: auto;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      vertical-align: middle;
+                border: burlywood;
+                border-radius: 4px;
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 10px 10px;
+                cursor: pointer;
+                width: 25%;
+                background-color: crimson;
+    }
+
+  form{
+      width: 250 px;
+      margin:0 auto;
+    }
+  
+  body {
+    background-image: url('/images/covid.JPG');
+    background-repeat: no-repeat;
+    background-size: cover;
+       }
+  </style>
+</head>
+
+
+<body align = 'center'>
+<form action='/DownloadRenewedDL' method="POST">
+  <div style="border: solid;width:600px;background-color: white;opacity: 0.85;margin-left: 340px;height:550px;margin-top: 50px;">
+    <h2 style="margin-top: 40px;">Renew Driving Licence</h2><br>
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray;width:80%">
+    {{#each DrivingLicence}}
+     <div style="margin-top: 30px;margin-left: 250px;">
+    <table>
+      <tr>
+        <th >
+            <input type="hidden" id="licenceNumber" name="licenceNumber" value="{{this._id}}">
+          <label for="Name" >Name:</label>
+        </th>
+        <th style="padding-left: 25px;">
+            {{this.Name}}  
+        </th>  
+     </tr>
+    </table>
+  </div>
+  <div style="margin-top: 30px;margin-left: 98px;">
+    <table>
+      <tr>
+        <th style="width:200px" align="right">
+          <label for="age" >Date of Birth:</label>
+        </th>
+        <th>
+           {{this.DateOfBirth}}
+        </th>
+        
+      </tr>
+    </table>
+  </div>
+  <div style="margin-top: 30px;margin-left: 88px;">
+    <table>
+      <tr>
+        <th style="width: 200px;"  align="right">
+          <label for="fee">Address:</label>
+        </th>
+        <th style="padding-left: 25px;">
+            {{this.Address}}
+        </th>
+    
+      </tr>
+    </table>
+	</div>  
+    <div style="margin-top: 30px;margin-left: 98px;">
+    <table>
+      <tr>
+        <th style="width: 200px;" align="right">
+          <label for="IssueDate">Date of Issue:</label>
+        </th>
+        <th style="margin-top: 25px;">
+            {{this.IssueDate}}
+        </th>
+    
+      </tr>
+    </table>
+	</div>  
+
+    <div style="margin-top: 30px;margin-left: 94px;">
+    <table>
+      <tr>
+        <th style="width: 200px;" align="right">
+          <label for="ExpiryDate">Expiry Date:</label>
+        </th>
+        <th>
+            {{this.ExpiryDate}}
+        </th>
+      </tr>
+    </table>
+	</div>  
+    <div style="margin-top: 30px;">
+    
+     <input type="submit" style="width: 300px;" value="Download Renewed Driving Licence">
+    </div>
+    
+	</div>
+    {{/each}}
+  
+  
+</form>
+</body>
+</html>
+

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    input[type=text], input[type=number]{
+      width: 25%;
+      padding: 5px 15px;
+      margin: auto;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+ 
+    input[type=submit]{
+      width: 10%;
+      padding: 5px 15px;
+      margin: auto;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      vertical-align: middle;
+                border: burlywood;
+                border-radius: 4px;
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 10px 10px;
+                cursor: pointer;
+                width: 25%;
+                background-color: #04AA6D;
+      }
+
+      body {
+        background-image: url('/images/tourism.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+          }
+  </style>
+</head>
+
+<body align = 'center'>
+    <div style="border: solid;width:900px;background-color: white;opacity: 0.85;margin-left: 180px;height:100%;margin-top: 50px;">
+    <h2>Vehicle Booking</h2>
+    {{# if vehicles}}
+     
+
+    {{# each vehicles}}
+      <form action='/vehicleBookingCustomerDetails?vehicleId={{this._id}}&fee={{this.Fee}}&Security={{this.Security}}' method="POST">
+            <table>
+                <tr>
+                    <hr style="height:1px;border-width:0;color:crimson;background-color:darkkhaki;width:100%">
+                    <h3 style="text-align: left;margin-left: 50px;margin-top: 25px;color: crimson;">{{this.VehicleName}}</h3>
+                </tr>
+                <tr>
+                    <th style="padding-left: 50px;">
+                       <input type="hidden" id="price1" name="price1" value="{{this.Fee}}">
+                       <label for="Slot" name="price" value="{{this.Fee}}"><span style="color: darkorange;">Fee         </span>${{this.Fee}}/Day</label>
+                    </th>
+                    <th>
+                        <hr style="height:100px;border-width:0;color:crimson;background-color:darkkhaki;width:1px">
+                    </th>
+                    <th style="width: 200px;">
+                        <label for="Slot"><span style="color: darkorange;">Type     </span>{{this.VehicleType}}</label>
+                    </th>
+                     <th>
+                        <hr style="height:100px;border-width:0;color:crimson;background-color:darkkhaki;width:1px">
+                    </th>
+                    <th style="width: 400px;">
+                         <label for="Slot"><span style="color: darkorange;">Mileage     </span>{{this.Mileage}}</label>
+                    </th>
+                     <th>
+                        <hr style="height:100px;border-width:0;color:crimson;background-color:darkkhaki;width:1px">
+                    </th>
+                    <th style="width: 400px;">
+                         <label for="Slot"><span style="color: darkorange;">Distance </span>{{this.AllowedDistance}}</label>
+                    </th>
+                    <th>
+                        <hr style="height:100px;border-width:0;color:crimson;background-color:darkkhaki;width:1px">
+                    </th>
+                    <th style="width: 450px;">
+                         <label for="Slot"><span style="color: darkorange;">Interstae Permit     </span>{{this.InterstatePermit}}</label>
+                    </th>
+                    <th>
+                        <hr style="height:100px;border-width:0;color:crimson;background-color:darkkhaki;width:1px">
+                    </th>
+                    <th style="width: 400px;">
+                         <label for="Slot"><span style="color: darkorange;">Insurance        </span>{{this.Insurance}}</label>
+                    </th>
+                    <th>
+                        <hr style="height:100px;border-width:0;color:crimson;background-color:darkkhaki;width:1px">
+                    </th>
+                    <th style="width: 200px;">
+                         <label for="Slot"><span style="color: darkorange;">Security                             </span>${{this.Security}}</label>
+                    </th>
+                    <th>
+                      <input type="hidden" id="hotelId" name="hotelId" value="{{this._id}}">
+                      <button  class="buttons button2" name="hotelId" value="{{this_id}}" style="vertical-align:middle;margin-top: 20px;margin-left: 30px;margin-right: 30px; width: 50px;background-color: goldenrod;">Book</button></th>
+                </tr>
+            </table>
+        </form>
+    {{/each}}
+    
+{{/if}}
+ </div>
+</body>
+</html>

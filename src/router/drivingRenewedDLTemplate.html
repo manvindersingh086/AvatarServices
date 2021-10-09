@@ -1,0 +1,47 @@
+<html>
+   
+    <body >
+        <div style="padding-left: 40%;">
+            {{#each DL}}
+            <table style="background-color: beige;border: 2px solid ; width: 400px;">
+                <tr>
+                    <th></th>
+                    <th><h2>Driving Licence Card</h2></th>
+                    <th style="width: 60px;"></th>
+                </tr>
+                <tr>
+                    <th>Driving Licence Number</th>
+                    <th>{{this.Id}}</th>
+                </tr>
+                <tr>
+                    <th>Name:</th>
+                    <th>{{this.Name}}</th>
+                </tr>
+                <tr>
+                    <th>Date of Birth:</th>
+                    <th>{{this.Dob}}</th>
+                </tr>
+                <tr>
+                    <th>Gender:</th>
+                    <th>{{this.Gender}}</th>
+                </tr>
+                <tr>
+                    <th>Address:</th>
+                    <th>{{this.Address}}</th>
+                </tr>
+                <tr>
+                    <th>Issue Date:</th>
+                    <th>{{this.IssueDate}}</th>
+                </tr>
+                <tr>
+                    <th>Expiry Date:</th>
+                    <th>{{this.ExpiryDate}}</th>
+                </tr>
+            </table>
+            {{/each}}
+           
+        </div>
+            
+       
+    </body>
+</html>

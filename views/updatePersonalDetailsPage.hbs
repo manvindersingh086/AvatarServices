@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    input[type=text], input[type=number]{
+      width: 25%;
+      padding: 5px 15px;
+      margin: auto;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+ 
+  input[type=submit]{
+      width: 10%;
+      padding: 5px 15px;
+      margin: auto;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      vertical-align: middle;
+                border: burlywood;
+                border-radius: 4px;
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 10px 10px;
+                cursor: pointer;
+                width: 25%;
+                background-color: #04AA6D;
+    }
+
+  form{
+      width: 250 px;
+      margin:0 auto;
+    }
+  
+  body {
+    background-image: url('/images/driving.JPG');
+    background-repeat: no-repeat;
+    background-size: cover;
+       }
+  </style>
+  <script type="text/javascript" src="/validation/drivingAndTransport.js"></script>
+</head>
+
+
+<body align = 'center'>
+<form action='/updateDetailsConfirmation' method="POST" enctype="multipart/form-data">
+  <div style="border: solid;width:600px;background-color: white;opacity: 0.85;margin-left: 340px;height:700px;margin-top: 50px;">
+    <h2 style="margin-top: 40px;">Driving Licence Details</h2><br>
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray;width:80%">
+    {{#each licDetails}}
+     <div style="margin-top: 30px;margin-left: 150px;">
+    <table>
+      <tr>
+        <th style="width: 120px;">
+          <label for="DrivingLicenceNumber" >Driving Licence Number:</label>
+        </th>
+        <th>
+           <input type="text" id="dNumber" name = 'dNumber' style="width: 150px;" value={{this._id}}>
+        </th>  
+      </tr>
+    </table>
+  </div>
+  <div style="margin-top: 30px;margin-left: 150px;">
+    <table>
+      <tr>
+        <th style="width: 120px;">
+          <label for="Name" >Name:</label>
+        </th>
+        <th>
+           <input type="text" id="Name" name = 'Name' style="width: 150px;" value="{{this.Name}}" onchange="validateName()">
+        </th>
+        
+      </tr>
+    </table>
+  </div>
+<div style="margin-top: 30px;margin-left: 150px;">
+    <table>
+      <tr>
+        <th style="width: 120px;">
+          <label for="email" >Email:</label>
+        </th>
+        <th>
+           <input type="text" id="email" name = 'email' style="width: 150px;" value="{{this.Email}}">
+        </th>
+        
+      </tr>
+    </table>
+  </div>
+  <div style="margin-top: 30px;margin-left: 150px;">
+    <table>
+      <tr>
+        <th style="width: 120px;">
+          <label for="address">Address:</label>
+        </th>
+        <th>
+		<textarea id="address" name="address"  value="{{this.Address}}" onchange="validateAddress()">
+            {{this.Address}}
+        </textarea>
+
+        </th>
+    
+      </tr>
+    </table> 
+  </div>
+  <div style="margin-top: 30px;margin-left: 150px;">
+    <table>
+      <tr>
+        <th style="width: 120px;">
+          <label for="Address Proof">Address Proof:</label>
+        </th>
+        <th>
+           <input type="hidden" id="oldAddress" name="oldAddress" value="{{this.Address}}">
+           <input type="File" id="addressProof" name="Details"  style="width: 150px;" disabled>
+		       <label for="myfile">Select a file:</label>
+        </th>
+      </tr>
+    </table>
+  </div>
+   <div style="margin-top: 30px;margin-left: 150px;">
+    <table>
+      <tr>
+        <th style="width: 120px;">
+          <label for="Identity Proof">Identity Proof:</label>
+        </th>
+        <th>
+           <input type="hidden" id="oldName" name="oldName" value="{{this.Name}}">
+           <input type="File" id="identityProof" name="Details"  style="width: 150px;" disabled>
+		       <label for="myfile">Select a file:</label>
+        </th>
+      </tr>
+    </table>
+  </div>
+    <div style="margin-top: 30px;">
+    
+     <input type="submit" id="subm" value="Update" disabled>
+
+    </div>
+	</div>
+    {{/each}}
+    
+</form>
+</body>
+</html>
+

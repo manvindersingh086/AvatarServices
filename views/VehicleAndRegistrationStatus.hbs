@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    input[type=text], input[type=number]{
+      width: 25%;
+      padding: 5px 15px;
+      margin: auto;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+ 
+    input[type=submit]{
+      width: 10%;
+      padding: 5px 15px;
+      margin: auto;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      vertical-align: middle;
+                border: burlywood;
+                border-radius: 4px;
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 10px 10px;
+                cursor: pointer;
+                width: 25%;
+                background-color: #04AA6D;
+      }
+
+      body {
+        background-image: url('/images/Covid.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+          }
+          .vertical {
+            border-left: 1px solid gray;
+            height: 30px;
+     
+        }
+  </style>
+  <script type="text/javascript" src="/validation/drivingAndTransport.js"></script>
+</head>
+
+<body align = 'center' onload="downloadCard()">
+    <div style="border: solid;width:670px;background-color: white;opacity: 0.6;margin-left: 320px;height:480px;margin-top: 50px;">
+    <h2>Vehicle Registration Request Status</h2>
+    <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:80%">
+    
+    {{# if vehicleRegs}}
+      <form action='/' >
+    {{# each vehicleRegs}}
+            <table>
+                <tr>
+                     <th style="padding-left: 5px;">
+                         <label style="width: 200px;">Reference Number</label>
+                     </th>
+                     <th>
+                          <div class = "vertical"></div>
+                     </th>
+                     <th>
+                         <label>Name</label>
+                     </th>
+                     <th>
+                          <div class = "vertical"></div>
+                     </th>
+                     <th>
+                         <label>Email</label>
+                     </th>
+                     <th>
+                          <div class = "vertical"></div>
+                     </th>
+                     <th>
+                         <label>Status</label>
+                     </th>
+                     
+                </tr>
+                <tr>
+                    <th>
+                        <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:60%">
+                    </th>
+                    <th>
+                        <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:60%">
+                    </th>
+                    <th>
+                        <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:60%">
+                    </th>
+
+                    <th>
+                        <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:60%">
+                    </th>
+                    <th>
+                        <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:60%">
+                    </th>
+                    <th>
+                        <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:60%">
+                    </th>
+                    <th>
+                        <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:60%">
+                    </th>
+                </tr>
+                <tr>
+                    <th style="padding-left: 50px;">
+                        {{this._id}}
+                        
+                    </th>
+                    <th>
+                          <div class = "vertical"></div>
+                     </th>
+                    <th>
+                        {{this.Name}}
+                    </th>
+                    <th>
+                          <div class = "vertical"></div>
+                     </th>
+                    <th>
+                        {{this.Email}}
+                    </th>
+                    <th>
+                          <div class = "vertical"></div>
+                     </th>
+                    <th>
+                        <div style="color:lightsalmon;" id="status" value="{{this.Status}}">{{this.Status}}</div>
+                    </th>
+                </tr>
+                
+                        
+                 
+            </table>
+            <div>
+                 <input type="submit" value="Home">
+            </div>
+            <div id="card">
+                 <a href="downloadVehicleRegCard?id={{this._id}}&Name={{this.Name}}&Dob={{this.DateofBirth}}&Address={{this.Address}}">Download Vehical Registration Card</a>
+            </div>
+    {{/each}}
+    </form>
+{{/if}}
+ </div>
+</body>
+</html>

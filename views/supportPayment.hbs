@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    input[type=text], input[type=number]{
+      width: 25%;
+      padding: 5px 15px;
+      margin: auto;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+ 
+  input[type=submit]{
+      width: 10%;
+      padding: 5px 15px;
+      margin: auto;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      vertical-align: middle;
+                border: burlywood;
+                border-radius: 4px;
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 10px 10px;
+                cursor: pointer;
+                width: 25%;
+                background-color: #04AA6D;
+    }
+
+  form{
+      width: 250 px;
+      margin:0 auto;
+    }
+  
+  body {
+    background-image: url('/images/Covid.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+       }
+  </style>
+  <script type="text/javascript" src="/validation/covid.js"></script>
+</head>
+
+
+<body align = 'center'>
+<form action='/selfIsolationDetails' method="POST" enctype="multipart/form-data">
+  <div style="border: solid;width:600px;background-color: white;opacity: 0.6;margin-left: 320px;height:1050px;margin-top: 50px;">
+    <h2 style="margin-top: 40px;">Isolate Support Payment </h2><br>
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray;width:80%">
+    
+    <div style="margin-top: 30px;margin-left: 150px;">
+      <table>
+        <tr>
+          <th style="width: 120px;">
+            <label for="Name" >Name:</label>
+          </th>
+          <th>
+            <input type="text" id="Name" name = 'Name' style="width: 150px;">
+            
+          </th>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:60%">
+    </div>
+    <div style="margin-top: 30px;margin-left: 150px;">
+      <table>
+        <tr>
+          <th style="width: 120px;">
+            <label for="Age" >Age:</label>
+          </th>
+          <th>
+            <input type="text" id="Age" name = 'Age' style="width: 150px;">
+          </th>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:60%">
+    </div>
+    <div style="margin-top: 30px;margin-left: 150px;">
+      <table>
+        <tr>
+          <th style="width: 120px;">
+            <label for="Email" >Email:</label>
+          </th>
+          <th>
+            <input type="text" id="Email" name = 'Email' style="width: 150px;">
+          </th>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:60%">
+    </div>
+    <div style="margin-top: 30px;margin-left: 150px;">
+      <table>
+        <tr>
+          <th style="width: 120px;">
+            <label for="Location">Location:</label>
+          </th>
+          <th>
+            <input type="text" id="Location" name="Location"  style="width: 150px;">
+          </th>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:60%">
+    </div>
+  <div style="margin-top: 30px;margin-left: 150px;">
+      <table>
+        <tr>
+          <th style="width: 120px;">
+            <label for="Covid Test">Covid Test:</label>
+          </th>
+          <th>
+            <input type="radio" id="covidTest" name="covidTest" value="Yes" style="width: 10px;">
+            <label for="Yes">Yes</label>
+            <input type="radio" id="covidTest" name="covidTest" value="No" style="width: 10px;">
+            <label for="No">No</label>
+          </th>
+        </tr>
+      </table>
+  </div>
+  <div>
+      <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:60%">
+    </div>
+  <div style="margin-top: 30px;margin-left: 150px;">
+    <table>
+      <tr>
+        <th style="width: 120px;">
+          <label for="Details">Details:</label>
+        </th>
+        <th>
+           <input type="File" name="Details"  style="width: 150px;">
+		       <label for="myfile">Select a file:</label>
+        </th>
+      </tr>
+    </table>
+  </div>
+  <div>
+      <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:60%">
+    </div>
+	<div style="margin-top: 30px;margin-left: 150px;">
+    <table>
+      <tr>
+        <th style="width: 120px;">
+          <label for="Self-isolation Details">Self-isolation Details:</label>
+        </th>
+        <th>
+           <input type="File" id="selfIsolationDetails" name="Details"  style="width: 150px;">
+		      <label for="myfile">Select a file:</label>
+        </th>
+      </tr>
+    </table>
+	</div>
+  <div>
+      <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:60%">
+    </div>
+  <div style="margin-top: 30px;margin-left: 150px;">
+    <table>
+      <tr>
+        <th style="width: 120px;">
+          <label>From Date:</label>
+        </th>
+        <th>
+          <input type="date" id="fromDate" name="fromDate" style="width: 145px;">
+        </th>
+      </tr>
+    </table>
+  </div>
+  <div>
+      <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:60%">
+    </div>
+  
+  <div style="margin-top: 30px;margin-left: 150px;">
+    <table>
+      <tr>
+        <th style="width: 120px;">
+          <label>To Date:</label>
+        </th>
+        <th>
+          <input type="date" id="toDate" name="toDate" style="width: 145px;">
+        </th>
+      </tr>
+    </table>
+  </div>
+  <div>
+      <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:60%">
+    </div>
+  <div style="margin-top: 30px;margin-left: 150px;">
+    <table>
+      <tr>
+        <th style="width: 120px;">
+          <label for="Employment Proof">Employment Proof:</label>
+        </th>
+        <th>
+           <input type="File" id="employmentProof" name="Details"  style="width: 150px;">
+		       <label for="myfile">Select a file:</label>
+        </th>
+       </tr>
+    </table>
+ </div>
+  <div>
+      <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:60%">
+    </div>
+  <div style="margin-top: 30px;margin-left: 150px;">
+    <table>
+      <tr>
+        <th style="width: 120px;">
+          <label for="Identity Proof">Identity Proof:</label>
+        </th>
+        <th>
+           <input type="File" id="identityProof" name="Details"  style="width: 150px;">
+		       <label for="myfile">Select a file:</label>
+        </th>
+      </tr>
+    </table>
+  </div>
+  <div>
+      <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:60%">
+    </div>
+  <div style="margin-top: 30px;margin-left: 150px;">
+    <table>
+      <tr>
+        <th style="width: 120px;">
+          <label for="Address Proof">Address Proof:</label>
+        </th>
+        <th>
+           <input type="File" id="addressProof" name="Details"  style="width: 150px;">
+		       <label for="myfile">Select a file:</label>
+        </th>
+      </tr>
+    </table>
+  </div>
+  <div>
+      <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:60%">
+    </div>
+  <div style="margin-top: 30px;margin-left: 50px;">
+    <input type="submit" value="Submit">
+  </div>
+  </div>
+</form>
+</body>
+</html>
+

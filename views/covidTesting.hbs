@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    input[type=text], input[type=number]{
+      width: 25%;
+      padding: 5px 15px;
+      margin: auto;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+ 
+  input[type=submit]{
+      width: 10%;
+      padding: 5px 15px;
+      margin: auto;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      vertical-align: middle;
+                border: burlywood;
+                border-radius: 4px;
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 10px 10px;
+                cursor: pointer;
+                width: 25%;
+                background-color: #04AA6D;
+    }
+
+  form{
+      width: 250 px;
+      margin:0 auto;
+    }
+  
+  body {
+    background-image: url('/images/Covid.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+       }
+  </style>
+  <script type="text/javascript" src="/validation/covid.js"></script>
+</head>
+
+<body align = 'center'>
+<form action="/covidTestingSlotDetails" method="POST">
+<div style="border: solid;width:600px;background-color: white;opacity: 0.6;margin-left: 320px;height:480px;margin-top: 50px;">
+    <h2 style="margin-top: 40px;">Covid Testing</h2><br>
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray;width:80%">
+  <div style="margin-top: 30px;">
+    <table>
+      <tr>
+        <th style="width: 120px;">
+          <label for="Name" >Name</label>
+           <label style="color: red;">*</label>
+        </th>
+        <th>
+           <input type="text" id="Name" name = 'Name' style="width: 150px;">
+        </th>
+         <th style="width: 120px;">
+           <label for="UIN">UIN</label>
+            <label style="color: red;">*</label>
+         </th>
+         <th>
+           <input type="number" maxlength=10 id="UIN" name="UIN" UIN="UIN" style="width: 150px;" >
+         </th>
+          
+          
+        </th>
+      </tr>
+    </table>
+  </div>
+
+  <div style="margin-top: 30px;">
+    <table>
+      <tr>
+        <th style="width: 120px;">
+          <label for="Age">Age</label>
+          <label style="color: red;">*</label>
+        </th>
+        <th>
+           <input type="text" id="Age" name="Age" Age = "Age" style="width: 150px;">
+        </th>
+        <th style="width: 120px;">
+           <label for="Location">City</label>
+            <label style="color: red;">*</label>
+        </th>
+        <th>
+		  <select name="City" id="City" style="width: 100px;" onchange="fillState()">
+			<option value="Sydney">Sydney</option>
+			<option value="Melbourn">Melbourn</option>
+      <option value="Wollongong">Wollongong</option>
+      <option value="Newcastle">Newcastle</option>
+      <option value="Griffith">Griffith</option>
+      <option value="Sydney">Sydney</option>
+      <option value="Geelong">Geelong</option>
+      <option value="Sunbury">Sunbury</option>
+      <option value="Brisbane">Brisbane</option>
+      <option value="GoldCoast">GoldCoast</option>
+		<br>
+		</select>
+        </th>
+      </tr>
+    </table>
+     
+  </div>
+  
+  <div style="margin-top: 30px;">
+    <table>
+      <tr>
+        <th style="width: 120px;padding-left: 0px;">
+          <label for="State" >State:</label>
+           <label style="color: red;">*</label>
+        </th>
+        <th>
+			  <select name="State" id="State" style="width: 100px;">
+				<option value="NSW">NSW</option>
+				<option value="ACT">ACT</option>
+				<option value="QLD">QLD</option>
+				<option value="VIC">VIC</option>
+				<option value="TAS">TAS</option>
+				<option value="WA">WA</option>
+				<option value="NT">NT</option>
+				<option value="SA">SA</option>
+			<br>
+			</select>
+        </th>
+   </div>
+   
+  </tr>
+</table>
+  </div>
+
+    <div style="margin-top: 30px;">
+    
+     <input type="submit" value="Submit">
+    </div>
+
+
+ 
+
+</form>
+
+</body>
+</html>

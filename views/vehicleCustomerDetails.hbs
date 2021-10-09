@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    input[type=text], input[type=number]{
+      width: 25%;
+      padding: 5px 15px;
+      margin: auto;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+ 
+  input[type=submit]{
+      width: 10%;
+      padding: 5px 15px;
+      margin: auto;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      vertical-align: middle;
+                border: burlywood;
+                border-radius: 4px;
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 10px 10px;
+                cursor: pointer;
+                width: 25%;
+                background-color: #04AA6D;
+    }
+
+  form{
+      width: 250 px;
+      margin:0 auto;
+    }
+  
+  body {
+    background-image: url('/images/tourism.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+       }
+  </style>
+  <script type="text/javascript" src="/validation/tourist.js"></script>
+</head>
+
+<body align = 'center'>
+<form action="/vehiclePayment" method="POST" enctype="multipart/form-data">
+<div style="border: solid;width:600px;background-color: white;opacity: 0.87;margin-left: 320px;height:540px;margin-top: 20px;">
+    <h2 style="margin-top: 20px;">Vehicle Booking</h2><br>
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray;width:80%">
+  <div style="margin-top: 30px;">
+    <table>
+      <tr>
+        <th>
+            <label for="vehicleId" style="margin-left: 180px;">Vehicle Id</label>
+        </th>
+        <th>
+           <input type="text" id="vehicleId" name = 'vehicleId' value="{{VehicleId}}" style="width: 200px;margin-left: 10px;" readonly="true" >
+        </th>
+      </tr>
+      <tr>
+        <th>
+            <label for="vehicleName" style="margin-left: 180px;">Vehicle Name</label>
+        </th>
+        <th>
+           <input type="text" id="vehicleName" name = 'vehicleName' value="{{VehicleName}}" style="width: 200px;margin-left: 10px;" readonly="true">
+        </th> 
+      </tr>
+      <tr>
+         <th>
+            <label for="name" style="margin-left: 180px;">Name</label>
+        </th>
+        <th>
+           <input type="text" id="custName" name = 'custName'  style="width: 200px;margin-left: 10px;" required>
+        </th>
+      </tr>
+      <tr>
+         <th>
+            <label for="address" style="margin-left: 180px;">Address</label>
+        </th>
+        <th>
+           <input type="text" id="address" name = 'address'  style="width: 200px;margin-left: 10px;" required>
+        </th>
+      </tr>
+      <tr>
+         <th>
+            <label for="DOB" style="margin-left: 180px;">Date of Booking</label>
+        </th>
+        <th>
+           <input type="date" id="dateOfBooking" name = 'dateOfBooking' style="width: 195px;margin-left: 10px;" required>
+        </th>
+      </tr>
+      <tr>
+         <th>
+            <label for="DOR" style="margin-left: 180px;">Date of Return</label>
+        </th>
+        <th>
+           <input type="date" id="dateOfReturn" name = 'dateOfReturn' onchange="updatePayment()"  style="width: 195px;margin-left: 10px;" required>
+        </th>
+      </tr>
+       <tr>
+         <th>
+            <label for="licenceNumber" style="margin-left: 180px;">Licence Number</label>
+        </th>
+        <th>
+           <input type="text" id="licenceNumber" name = 'licenceNumber'  style="width: 200px;margin-left: 10px;" required>
+        </th>
+      </tr>
+      <tr>
+         <th>
+            <label for="identityProof" style="margin-left: 180px;">Identity Proof</label>
+        </th>
+        <th>
+           <input type="file" id="identityProof" name = 'Proof'  style="width: 200px;margin-left: 10px;" required>
+        </th>
+      </tr>
+      <tr>
+         <th>
+            <label for="licenceProof" style="margin-left: 180px;">Licence Proof</label>
+        </th>
+        <th>
+           <input type="file" id="licenceProof" name = 'Proof'  style="width: 200px;margin-left: 10px;" required>
+        </th>
+      </tr>
+      <tr>
+         <th>
+            <label for="TotalAmount" style="margin-left: 180px;">Total Payment</label>
+        </th>
+        <th>
+           <input type="text" id="totalPayment" name = 'totalPayment'  style="width: 200px;margin-left: 10px;" value=${{totalFee}}  readonly="true" >
+        </th>
+      </tr>
+    </table>
+  </div>
+
+  
+  <div style="margin-top: 10px;margin-left: 50px;">
+    <input type="submit" value="Book" style="background-color: crimson;">
+  </div>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    input[type=text], input[type=number]{
+      width: 25%;
+      padding: 5px 15px;
+      margin: auto;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+ 
+  input[type=submit]{
+      width: 10%;
+      padding: 5px 15px;
+      margin: auto;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      vertical-align: middle;
+                border: burlywood;
+                border-radius: 4px;
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 10px 10px;
+                cursor: pointer;
+                width: 25%;
+                background-color: #04AA6D;
+    }
+    .button {
+            border: burlywood;
+            border-radius: 4px;
+            color: white;
+            padding: 5px 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            
+            cursor: pointer;
+            width: 350px;
+            background-color: #04AA6D;
+      }
+
+        .buttons {
+          display: inline-block;
+          border-radius: 4px;
+          background-color:cadetblue;
+          border: olivedrab;
+          color: #FFFFFF;
+          text-align: center;
+          font-size: 28px;
+          padding: 5px;
+          width: 350px;
+          transition: all 0.5s;
+          cursor: pointer;
+          margin: 5px;
+                }
+
+        .buttons span {
+          cursor: pointer;
+          display: inline-block;
+          position: relative;
+          transition: 0.5s;
+        }
+
+        .buttons span:after {
+
+          content: '\00bb';
+          position: absolute;
+          opacity: 0;
+          top: 0;
+          right: -20px;
+          transition: 0.5s;
+        }
+        .button:hover{
+            background: #383;
+        }
+        .buttons:hover{
+            background: #575757;
+             width: 350px;
+        }
+        .buttons:hover span {
+          padding-right: 25px;
+        }
+
+        .buttons:hover span:after {
+
+          opacity: 1;
+          right: 0;
+        }
+  form{
+      width: 250 px;
+      margin:0 auto;
+    }
+  
+  body {
+    background-image: url('/images/Covid.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+       }
+  </style>
+  <script type="text/javascript" src="/validation/covid.js"></script>
+</head>
+
+
+<body align = 'center'>
+<form action='/covidRegistration' method="POST" onsubmit="return validateFields()" >
+  <div style="border: solid;width:600px;background-color: white;opacity: 0.6;margin-left: 320px;height:520px;margin-top: 50px;">
+    <h2 style="margin-top: 40px;">Vaccine Details Confirmation</h2><br>
+    <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:80%;margin-top: 0px;">
+  <div style="margin-top: 15px;">
+    <table>
+      <tr>
+          <th style="padding-left: 170px;">
+              <label>Name</label>
+               <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:80%">
+          </th>
+          <th >
+              {{name}}
+               <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:80%">
+          </th>
+      </tr>
+
+      <tr>
+          <th style="padding-left: 170px;">
+              <label>Email</label>
+               <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:80%">
+          </th>
+          <th style="padding-left: 30px;"> 
+              {{this.email}}
+               <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:90%">
+          </th>
+      </tr>
+      <tr>
+          <th style="padding-left: 170px;">
+              <label>UIN</label>
+               <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:80%">
+          </th>
+          <th >
+              {{this.UIN}}
+               <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:80%">
+          </th>
+      </tr>
+      <tr>
+          <th style="padding-left: 170px;">
+              <label>Age</label>
+               <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:80%">
+          </th>
+          <th >
+              {{this.Age}}
+               <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:80%">
+          </th>
+      </tr>
+      <tr>
+          <th style="padding-left: 170px;">
+              <label >City</label>
+               <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:80%">
+          </th>
+          <th >
+              {{this.City}}
+               <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:80%">
+          </th>
+      </tr>
+      <tr>
+          <th style="padding-left: 170px;">
+              <label>State</label>
+               <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:80%">
+          </th>
+          <th >
+              {{this.State}}
+               <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:80%">
+          </th>
+      </tr>
+      <tr>
+          <th style="padding-left: 170px;">
+              <label>Dose</label>
+               <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:80%">
+          </th>
+          <th>
+              {{this.Dose}}
+               <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:80%">
+          </th>
+      </tr>
+      <tr>
+          <th style="padding-left: 170px;">
+              <label>Vaccine</label>
+               <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:80%">
+          </th>
+          <th>
+              {{this.Vaccine}}
+               <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:80%">
+          </th>
+      </tr>
+      <tr>
+         <th style="padding-left: 170px;">
+              <label>Slot Details</label>
+               <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:80%">
+          </th>
+          <th>
+              {{this.slot}}
+               <hr style="height:1px;border-width:0;color:gray;background-color:gray;width:80%">
+          </th>
+      </tr>
+      <tr>
+          <th style="padding-left: 180px;">
+              <button  style="background-color: cornflowerblue;font-weight: bold;">Confirm</button>
+          </th>
+          <th>
+              <button  style="background-color: cornflowerblue;font-weight: bold;">Cancel</button>
+          </th>
+      </tr>
+    </table>
+
+  </div>
+</form>
+</body>
+</html>
+

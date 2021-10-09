@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    input[type=text], input[type=number]{
+      width: 25%;
+      padding: 5px 15px;
+      margin: auto;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+ 
+  input[type=submit]{
+      width: 10%;
+      padding: 5px 15px;
+      margin: auto;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      vertical-align: middle;
+                border: burlywood;
+                border-radius: 4px;
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 10px 10px;
+                cursor: pointer;
+                width: 25%;
+                background-color: crimson;
+    }
+
+  form{
+      width: 250 px;
+      margin:0 auto;
+    }
+  
+  body {
+    background-image: url('/images/payment.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+       }
+  </style>
+</head>
+
+
+<body align = 'center'>
+<form action='/guideGardDetailsCheck' method="POST">
+  <div style="border: solid;width:600px;background-color: white;opacity: 0.8;margin-left: 320px;height:500px;margin-top: 50px;">
+    <h2 style="margin-top: 40px;">Payment Page</h2><br>
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray;width:80%">
+    <input type="hidden" id="guideId" name="guideId" value="{{ID}}">
+    <div style="margin-top: 30px;margin-left: 150px;">
+      <table>
+        <tr>
+          <th style="width: 120px;">
+            <label for="cardNumber" >Card Number</label>
+          </th>
+          <th>
+            <input type="text" id="cardNumber" name = 'cardNumber' style="width: 150px;" placeholder="####-####-####">
+           </th>
+        </tr>
+      </table>
+    </div>
+
+    <div style="margin-top: 30px;margin-left: 150px;">
+      <table>
+        <tr>
+          <th style="width: 120px;">
+            <label for="Name" >Expiry Date</label>
+          </th>
+          <th>
+            <input type="date" id="expiryDate" name = 'expiryDate' style="width: 145px;">
+           </th>
+        </tr>
+      </table>
+    </div>
+
+    <div style="margin-top: 30px;margin-left: 150px;">
+      <table>
+        <tr>
+          <th style="width: 120px;">
+            <label for="cvv" >CVV</label>
+          </th>
+          <th>
+            <input type="text" id="cvv" name = 'cvv' style="width: 145px;" maxlength="3">
+           </th>
+        </tr>
+      </table>
+    </div>
+
+    <div style="margin-top: 30px;margin-left: 120px;">
+      <table>
+        <tr>
+          <th style="width: 150px;">
+            <label for="cardHolderName" >Card Holder Name</label>
+          </th>
+          <th>
+            <input type="text" id="cardHolderName" name = 'cardHolderName' style="width: 145px;" >
+           </th>
+        </tr>
+      </table>
+    </div>
+
+     <div style="margin-top: 30px;margin-left: 120px;">
+      <table>
+        <tr>
+          <th style="width: 150px;">
+            <label for="amount" >Amount</label>
+          </th>
+          <th>
+            <input type="text" id="amount" name = 'amount' style="width: 145px;" value="${{Amount}}" readonly>
+           </th>
+        </tr>
+      </table>
+    </div>
+
+  <div style="margin-top: 10px;margin-left: 30px;">
+    <input type="submit" value="Pay">
+  </div>
+  </div>
+</form>
+</body>
+</html>
+

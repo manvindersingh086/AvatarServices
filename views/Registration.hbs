@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    input[type=text], input[type=number]{
+      width: 25%;
+      padding: 5px 15px;
+      margin: auto;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+ 
+  input[type=submit]{
+      width: 10%;
+      padding: 5px 15px;
+      margin: auto;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      vertical-align: middle;
+                border: burlywood;
+                border-radius: 4px;
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 10px 10px;
+                cursor: pointer;
+                width: 25%;
+                background-color: #04AA6D;
+    }
+
+  form{
+      width: 250 px;
+      margin:0 auto;
+    }
+  
+  body {
+    background-image: url('/images/Covid.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+       }
+  </style>
+  <script type="text/javascript" src="/validation/covid.js"></script>
+</head>
+
+
+<body align = 'center'>
+<form action='/covidRegistration' method="POST" onsubmit="return validateFields()" >
+  <div style="border: solid;width:600px;background-color: white;opacity: 0.6;margin-left: 320px;height:480px;margin-top: 50px;">
+    <h2 style="margin-top: 40px;">Covid-19 Registration</h2><br>
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray;width:80%">
+  <div style="margin-top: 30px;">
+    <table>
+      <tr>
+        <th style="width: 120px;">
+          <label for="Name" >Name:</label>
+        </th>
+        <th>
+           <input type="text" id="Name" name = 'Name' style="width: 150px;">
+        </th>
+         <th style="width: 120px;">
+           <label for="Contact">Contact:</label>
+         </th>
+         <th>
+           <input type="number" maxlength=10 id="Contact" name="Contact" Contact="Contact" style="width: 150px;" >
+         </th>
+          
+          
+        </th>
+      </tr>
+    </table>
+  </div>
+
+  <div style="margin-top: 30px;">
+    <table>
+      <tr>
+        <th style="width: 120px;">
+          <label for="Address">Address:</label>
+        </th>
+        <th>
+           <input type="text" id="Address" name="Address" Address = "Address" style="width: 150px;">
+        </th>
+        <th style="width: 120px;">
+           <label for="Zip">Zip:</label>
+        </th>
+        <th>
+          <input type="number" maxlength=6 id="Zip" name="Zip" Zip="Zip" style="width: 150px;">
+        </th>
+      </tr>
+    </table>
+     
+  </div>
+  
+  <div style="margin-top: 30px;">
+    <table>
+      <tr>
+        <th style="width: 120px;">
+          <label>Date of birth:</label>
+        </th>
+        <th>
+          <input type="date" id="Date" name="Date" style="width: 145px;">
+        </th>
+        <th style="width: 120px;">
+          <label for="UIN">UIN:</label>
+        </th>
+        <th>
+           <input type="number" id="UIN" name="UIN" UID="UIN" style="width: 150px;">
+        </th> 
+   </div>
+  </tr>
+</table>
+
+  </div>
+    <div style="margin-top: 30px;">
+    
+     <input type="submit" value="Submit">
+    </div>
+</form>
+</body>
+</html>
+

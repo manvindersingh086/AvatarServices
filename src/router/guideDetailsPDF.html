@@ -1,0 +1,39 @@
+<html>
+   
+    <body >
+        <div style="padding-left: 40%;">
+            {{#each guide}}
+            <table style="background-color: beige;border: 2px solid ; width: 400px;">
+                <tr>
+                    <th></th>
+                    <th><h2>Guide Details</h2></th>
+                    <th style="width: 60px;"></th>
+                </tr>
+                <tr>
+                    <th>Name</th>
+                    <th>{{this.Name}}</th>
+                </tr>
+                <tr>
+                    <th>Age:</th>
+                    <th>{{this.Age}}</th>
+                </tr>
+                <tr>
+                    <th>Fee:</th>
+                    <th>{{this.Fee}}</th>
+                </tr>
+                <tr>
+                    <th>City:</th>
+                    <th>{{this.City}}</th>
+                </tr>
+                <tr>
+                    <th>Language:</th>
+                    <th>{{this.Language}}</th>
+                </tr>
+            </table>
+            {{/each}}
+           
+        </div>
+            
+       
+    </body>
+</html>
